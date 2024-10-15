@@ -1,0 +1,32 @@
+{
+  "name": "@rhyster/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript"
+  ],
+  "author": "Rhythm",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.11"
+  }
+}
