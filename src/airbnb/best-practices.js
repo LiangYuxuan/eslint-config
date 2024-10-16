@@ -55,7 +55,11 @@ export default {
 
         // require the use of === and !==
         // https://eslint.org/docs/rules/eqeqeq
-        eqeqeq: ['error', 'always', { null: 'ignore' }],
+        eqeqeq: [
+            'error',
+            'always',
+            { null: 'ignore' },
+        ],
 
         // Require grouped accessor pairs in object literals and classes
         // https://eslint.org/docs/rules/grouped-accessor-pairs
@@ -98,7 +102,11 @@ export default {
         'no-empty-function': [
             'error',
             {
-                allow: ['arrowFunctions', 'functions', 'methods'],
+                allow: [
+                    'arrowFunctions',
+                    'functions',
+                    'methods',
+                ],
             },
         ],
 
@@ -405,7 +413,14 @@ export default {
         // https://eslint.org/docs/rules/no-warning-comments
         'no-warning-comments': [
             'off',
-            { terms: ['todo', 'fixme', 'xxx'], location: 'start' },
+            {
+                terms: [
+                    'todo',
+                    'fixme',
+                    'xxx',
+                ],
+                location: 'start',
+            },
         ],
 
         // disallow use of the with statement
@@ -451,7 +466,11 @@ export default {
 
         // require immediate function invocation to be wrapped in parentheses
         // https://eslint.org/docs/rules/wrap-iife.html
-        'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+        'wrap-iife': [
+            'error',
+            'outside',
+            { functionPrototypeMethods: false },
+        ],
 
         // require or disallow Yoda conditions
         // https://eslint.org/docs/rules/yoda
