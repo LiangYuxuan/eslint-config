@@ -1,5 +1,8 @@
 /** @type {import('eslint').Linter.Config} */
 export default {
+    plugins: {
+        '@stylistic': stylistic,
+    },
     rules: {
         // enforces getter/setter pairs in objects
         // https://eslint.org/docs/rules/accessor-pairs
@@ -50,8 +53,8 @@ export default {
         'dot-notation': ['error', { allowKeywords: true }],
 
         // enforces consistent newlines before or after dots
-        // https://eslint.org/docs/rules/dot-location
-        'dot-location': ['error', 'property'],
+        // https://eslint.style/rules/default/dot-location
+        '@stylistic/dot-location': ['error', 'property'],
 
         // require the use of === and !==
         // https://eslint.org/docs/rules/eqeqeq
@@ -143,16 +146,12 @@ export default {
         'no-fallthrough': 'error',
 
         // disallow the use of leading or trailing decimal points in numeric literals
-        // https://eslint.org/docs/rules/no-floating-decimal
-        'no-floating-decimal': 'error',
+        // https://eslint.style/rules/default/no-floating-decimal
+        '@stylistic/no-floating-decimal': 'error',
 
         // disallow reassignments of native objects or read-only globals
         // https://eslint.org/docs/rules/no-global-assign
         'no-global-assign': ['error', { exceptions: [] }],
-
-        // deprecated in favor of no-global-assign
-        // https://eslint.org/docs/rules/no-native-reassign
-        'no-native-reassign': 'off',
 
         // disallow implicit type conversions
         // https://eslint.org/docs/rules/no-implicit-coercion
@@ -207,8 +206,8 @@ export default {
         ],
 
         // disallow use of multiple spaces
-        // https://eslint.org/docs/rules/no-multi-spaces
-        'no-multi-spaces': [
+        // https://eslint.style/rules/default/no-multi-spaces
+        '@stylistic/no-multi-spaces': [
             'error',
             {
                 ignoreEOLComments: false,
@@ -465,8 +464,8 @@ export default {
         'vars-on-top': 'error',
 
         // require immediate function invocation to be wrapped in parentheses
-        // https://eslint.org/docs/rules/wrap-iife.html
-        'wrap-iife': [
+        // https://eslint.style/rules/default/wrap-iife
+        '@stylistic/wrap-iife': [
             'error',
             'outside',
             { functionPrototypeMethods: false },

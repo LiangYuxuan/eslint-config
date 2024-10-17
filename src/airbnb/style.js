@@ -448,11 +448,6 @@ export default {
         // https://eslint.org/docs/rules/no-nested-ternary
         'no-nested-ternary': 'error',
 
-        // disallow use of the Object constructor
-        // deprecated in favor of func-call-spacing
-        // https://eslint.org/docs/rules/no-new-object
-        'no-new-object': 'off',
-
         // disallow calls to the Object constructor without an argument
         // https://eslint.org/docs/rules/no-object-constructor
         'no-object-constructor': 'error',
@@ -488,11 +483,6 @@ export default {
                     '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
             },
         ],
-
-        // disallow space between function identifier and application
-        // deprecated in favor of func-call-spacing
-        // https://eslint.org/docs/rules/no-spaced-func
-        'no-spaced-func': 'off',
 
         // disallow tab characters entirely
         // https://eslint.style/rules/default/no-tabs

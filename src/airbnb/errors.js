@@ -1,5 +1,8 @@
 /** @type {import('eslint').Linter.Config} */
 export default {
+    plugins: {
+        '@stylistic': stylistic,
+    },
     rules: {
         // Enforce “for” loop update clause moving the counter in the right direction
         // https://eslint.org/docs/rules/for-direction
@@ -78,8 +81,8 @@ export default {
         'no-extra-boolean-cast': 'error',
 
         // disallow unnecessary parentheses
-        // https://eslint.org/docs/rules/no-extra-parens
-        'no-extra-parens': [
+        // https://eslint.style/rules/default/no-extra-parens
+        '@stylistic/no-extra-parens': [
             'off',
             'all',
             {
@@ -92,8 +95,8 @@ export default {
         ],
 
         // disallow unnecessary semicolons
-        // https://eslint.org/docs/rules/no-extra-semi
-        'no-extra-semi': 'error',
+        // https://eslint.style/rules/default/no-extra-semi
+        '@stylistic/no-extra-semi': 'error',
 
         // disallow overwriting functions written as function declarations
         // https://eslint.org/docs/rules/no-func-assign
@@ -192,11 +195,6 @@ export default {
         // Disallow useless backreferences in regular expressions
         // https://eslint.org/docs/rules/no-useless-backreference
         'no-useless-backreference': 'error',
-
-        // disallow negation of the left operand of an in expression
-        // deprecated in favor of no-unsafe-negation
-        // https://eslint.org/docs/rules/no-negated-in-lhs
-        'no-negated-in-lhs': 'off',
 
         // Disallow assignments that can lead to race conditions due to usage of await or yield
         // https://eslint.org/docs/rules/require-atomic-updates
