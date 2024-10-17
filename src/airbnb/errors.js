@@ -133,7 +133,7 @@ export default {
         'no-obj-calls': 'error',
 
         // Disallow new operators with global non-constructor functions
-        // https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+        // https://eslint.org/docs/rules/no-new-native-nonconstructor
         'no-new-native-nonconstructor': 'error',
 
         // Disallow returning values from Promise executor functions

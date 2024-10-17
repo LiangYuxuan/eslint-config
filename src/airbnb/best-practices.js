@@ -120,7 +120,7 @@ export default {
         'no-empty-pattern': 'error',
 
         // Disallow empty static blocks
-        // https://eslint.org/docs/latest/rules/no-empty-static-block
+        // https://eslint.org/docs/rules/no-empty-static-block
         'no-empty-static-block': 'error',
 
         // disallow comparisons to null without a type-checking operator
@@ -237,7 +237,7 @@ export default {
         'no-nonoctal-decimal-escape': 'error',
 
         // Disallow calls to the Object constructor without an argument
-        // https://eslint.org/docs/latest/rules/no-object-constructor
+        // https://eslint.org/docs/rules/no-object-constructor
         'no-object-constructor': 'error',
 
         // disallow use of (old style) octal literals
