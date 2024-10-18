@@ -1,10 +1,6 @@
-import stylistic from '@stylistic/eslint-plugin';
-
 /** @type {import('eslint').Linter.Config} */
 export default {
-    plugins: {
-        '@stylistic': stylistic,
-    },
+    name: '@rhyster/eslint-config/airbnb/style',
     rules: {
         // enforce line breaks after opening and before closing array brackets
         // https://eslint.style/rules/default/array-bracket-newline

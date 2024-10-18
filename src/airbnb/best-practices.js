@@ -1,10 +1,6 @@
-import stylistic from '@stylistic/eslint-plugin';
-
 /** @type {import('eslint').Linter.Config} */
 export default {
-    plugins: {
-        '@stylistic': stylistic,
-    },
+    name: '@rhyster/eslint-config/airbnb/best-practices',
     rules: {
         // enforces getter/setter pairs in objects
         // https://eslint.org/docs/rules/accessor-pairs

@@ -1,16 +1,6 @@
-import globals from 'globals';
-import stylistic from '@stylistic/eslint-plugin';
-
 /** @type {import('eslint').Linter.Config} */
 export default {
-    plugins: {
-        '@stylistic': stylistic,
-    },
-    languageOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module',
-        globals: globals.es6,
-    },
+    name: '@rhyster/eslint-config/airbnb/es6',
     rules: {
         // enforces no braces where they can be omitted
         // https://eslint.org/docs/rules/arrow-body-style

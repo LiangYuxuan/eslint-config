@@ -2,6 +2,7 @@ import confusingBrowserGlobals from 'confusing-browser-globals';
 
 /** @type {import('eslint').Linter.Config} */
 export default {
+    name: '@rhyster/eslint-config/airbnb/variables',
     rules: {
         // enforce or disallow variable initializations at definition
         // https://eslint.org/docs/rules/init-declarations

@@ -1,10 +1,6 @@
-import stylistic from '@stylistic/eslint-plugin';
-
 /** @type {import('eslint').Linter.Config} */
 export default {
-    plugins: {
-        '@stylistic': stylistic,
-    },
+    name: '@rhyster/eslint-config/airbnb/errors',
     rules: {
         // Enforce “for” loop update clause moving the counter in the right direction
         // https://eslint.org/docs/rules/for-direction
