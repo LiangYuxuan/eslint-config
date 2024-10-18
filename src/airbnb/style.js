@@ -251,16 +251,6 @@ export default {
         // https://eslint.style/rules/default/lines-around-comment
         '@stylistic/lines-around-comment': 'off',
 
-        // require or disallow newlines around directives
-        // https://eslint.org/docs/rules/lines-around-directive
-        'lines-around-directive': [
-            'error',
-            {
-                before: 'always',
-                after: 'always',
-            },
-        ],
-
         // Require or disallow logical assignment logical operator shorthand
         // https://eslint.org/docs/rules/logical-assignment-operators
         'logical-assignment-operators': [
@@ -356,13 +346,6 @@ export default {
         // disallow the omission of parentheses when invoking a constructor with no arguments
         // https://eslint.style/rules/default/new-parens
         '@stylistic/new-parens': 'error',
-
-        // allow/disallow an empty newline after var statement
-        // https://eslint.org/docs/rules/newline-after-var
-        'newline-after-var': 'off',
-
-        // https://eslint.org/docs/rules/newline-before-return
-        'newline-before-return': 'off',
 
         // enforces new line after each method call in the chain to make it
         // more readable and easy to maintain
