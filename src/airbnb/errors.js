@@ -87,7 +87,6 @@ export default {
                 conditionalAssign: true,
                 nestedBinaryExpressions: false,
                 returnAssign: false,
-                ignoreJSX: 'all', // delegate to eslint-plugin-react
                 enforceForArrowConditionals: false,
             },
         ],
