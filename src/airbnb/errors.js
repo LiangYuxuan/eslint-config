@@ -28,7 +28,12 @@ export default {
 
         // disallow use of console
         // https://eslint.org/docs/rules/no-console
-        'no-console': 'warn',
+        'no-console': [
+            'error',
+            {
+                allow: ['warn', 'error'],
+            },
+        ],
 
         // Disallows expressions where the operation doesn't affect the value
         // https://eslint.org/docs/rules/no-constant-binary-expression
@@ -36,7 +41,7 @@ export default {
 
         // disallow use of constant expressions in conditions
         // https://eslint.org/docs/rules/no-constant-condition
-        'no-constant-condition': 'warn',
+        'no-constant-condition': 'error',
 
         // disallow control characters in regular expressions
         // https://eslint.org/docs/rules/no-control-regex
