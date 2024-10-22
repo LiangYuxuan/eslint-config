@@ -241,16 +241,16 @@ export default {
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-relative-parent-imports.md
         'import/no-relative-parent-imports': 'off',
 
-        // // Reports modules without any exports, or with unused exports
-        // // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md
-        // 'import/no-unused-modules': [
-        //     'error',
-        //     {
-        //         ignoreExports: [],
-        //         missingExports: true,
-        //         unusedExports: true,
-        //     },
-        // ],
+        // Reports modules without any exports, or with unused exports
+        // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md
+        'import/no-unused-modules': [
+            'error',
+            {
+                ignoreExports: ['eslint.config.js'],
+                missingExports: true,
+                unusedExports: true,
+            },
+        ],
 
         // Reports the use of import declarations with CommonJS exports
         // in any module except for the main module.
