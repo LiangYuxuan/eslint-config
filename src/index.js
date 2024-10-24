@@ -18,22 +18,40 @@ export default [
             import: importPlugin,
         },
         settings: {
+            'import/parsers': {
+                espree: [
+                    '.js',
+                    '.mjs',
+                ],
+                '@typescript-eslint/parser': [
+                    '.ts',
+                    '.d.ts',
+                ],
+            },
             'import/resolver': {
                 node: {
                     extensions: [
                         '.mjs',
                         '.js',
                         '.json',
+                        '.ts',
+                        '.d.ts',
                     ],
                 },
             },
             'import/extensions': [
                 '.js',
                 '.mjs',
+                '.ts',
+                '.d.ts',
             ],
             'import/core-modules': [],
             'import/ignore': [
                 'node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$',
+            ],
+            'import/external-module-folders': [
+                'node_modules',
+                'node_modules/@types',
             ],
         },
     },
