@@ -1,6 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 export default {
-    name: '@rhyster/eslint-config/node',
+    name: '@rhyster/eslint-config/airbnb/node',
     rules: {
         // enforce return after a callback
         // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/callback-return.md

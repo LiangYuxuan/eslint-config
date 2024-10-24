@@ -3,7 +3,7 @@ import nodePlugin from 'eslint-plugin-n';
 
 import node from './airbnb/node.js';
 
-// eslint-disable-next-line import/no-unused-modules
+/** @type {import('eslint').Linter.Config} */
 export default {
     languageOptions: {
         globals: globals.node,
