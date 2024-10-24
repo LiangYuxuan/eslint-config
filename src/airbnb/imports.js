@@ -51,9 +51,9 @@ export default {
                     'spec/**', // mocha, rspec-like pattern
                     '**/__tests__/**', // jest pattern
                     '**/__mocks__/**', // jest pattern
-                    'test.js', // repos with a single test file
-                    'test-*.js', // repos with multiple top-level test files
-                    '**/*{.,_}{test,spec}.js', // tests where the extension or filename suffix denotes that it is a test
+                    'test.{js,ts}', // repos with a single test file
+                    'test-*.{js,ts}', // repos with multiple top-level test files
+                    '**/*{.,_}{test,spec}.{js,ts}', // tests where the extension or filename suffix denotes that it is a test
                     '**/jest.config.js', // jest config
                     '**/jest.setup.js', // jest setup
                     '**/vue.config.js', // vue-cli config
@@ -109,10 +109,10 @@ export default {
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md
         'import/extensions': [
             'error',
-            'ignorePackages',
+            'always',
             {
-                js: 'always',
-                mjs: 'always',
+                ignorePackages: true,
+                checkTypeImports: true,
             },
         ],
 
