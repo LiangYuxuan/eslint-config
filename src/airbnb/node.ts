@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/node',
     rules: {
@@ -50,4 +51,4 @@ export default {
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-nodejs-modules.md
         'import/no-nodejs-modules': 'off',
     },
-};
+} satisfies Linter.Config;

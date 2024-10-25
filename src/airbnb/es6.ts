@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/es6',
     rules: {
@@ -206,4 +207,4 @@ export default {
         // https://eslint.style/rules/default/yield-star-spacing
         '@stylistic/yield-star-spacing': ['error', 'after'],
     },
-};
+} satisfies Linter.Config;

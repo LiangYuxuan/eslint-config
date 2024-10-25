@@ -1,6 +1,7 @@
 import confusingBrowserGlobals from 'confusing-browser-globals';
 
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/variables',
     rules: {
@@ -70,4 +71,4 @@ export default {
             { functions: true, classes: true, variables: true },
         ],
     },
-};
+} satisfies Linter.Config;

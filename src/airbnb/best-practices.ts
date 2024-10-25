@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/best-practices',
     rules: {
@@ -473,4 +474,4 @@ export default {
         // https://eslint.org/docs/rules/yoda
         yoda: 'error',
     },
-};
+} satisfies Linter.Config;

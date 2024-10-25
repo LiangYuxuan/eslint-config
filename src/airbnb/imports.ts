@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/imports',
     rules: {
@@ -274,4 +275,4 @@ export default {
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md
         'import/no-empty-named-blocks': 'error',
     },
-};
+} satisfies Linter.Config;

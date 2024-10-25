@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/errors',
     rules: {
@@ -211,4 +212,4 @@ export default {
         // https://eslint.org/docs/rules/valid-typeof
         'valid-typeof': ['error', { requireStringLiterals: true }],
     },
-};
+} satisfies Linter.Config;

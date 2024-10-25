@@ -1,4 +1,5 @@
-/** @type {import('eslint').Linter.Config} */
+import type { Linter } from 'eslint';
+
 export default {
     name: '@rhyster/eslint-config/airbnb/style',
     rules: {
@@ -695,4 +696,4 @@ export default {
         // https://eslint.style/rules/default/wrap-regex
         '@stylistic/wrap-regex': 'off',
     },
-};
+} satisfies Linter.Config;
