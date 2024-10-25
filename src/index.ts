@@ -1,13 +1,13 @@
 import stylistic from '@stylistic/eslint-plugin';
 import importPlugin from 'eslint-plugin-import';
 
-import bestPractices from './airbnb/best-practices.js';
-import errors from './airbnb/errors.js';
-import style from './airbnb/style.js';
-import variables from './airbnb/variables.js';
-import es6 from './airbnb/es6.js';
-import imports from './airbnb/imports.js';
-import strict from './airbnb/strict.js';
+import bestPractices from './airbnb/best-practices.ts';
+import errors from './airbnb/errors.ts';
+import style from './airbnb/style.ts';
+import variables from './airbnb/variables.ts';
+import es6 from './airbnb/es6.ts';
+import imports from './airbnb/imports.ts';
+import strict from './airbnb/strict.ts';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [

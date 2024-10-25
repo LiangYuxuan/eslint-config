@@ -1,7 +1,7 @@
 import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
 
-import node from './airbnb/node.js';
+import node from './airbnb/node.ts';
 
 /** @type {import('eslint').Linter.Config} */
 export default {
