@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 
-import core from './src/index.ts';
+import { core } from './src/index.ts';
 
 import type { Linter } from 'eslint';
 

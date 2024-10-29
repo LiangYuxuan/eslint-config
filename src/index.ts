@@ -72,7 +72,7 @@ const general = {
     },
 } as const satisfies Config;
 
-const core = [
+export const core = [
     {
         name: '@rhyster/eslint-config/files-ts',
         files: ['**/*.ts'],
@@ -87,7 +87,6 @@ const core = [
     strict,
     typescript,
 ] as const satisfies Config[];
-export default core;
 
 export const node = [
     ...core,
