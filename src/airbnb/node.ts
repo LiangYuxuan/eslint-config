@@ -48,7 +48,7 @@ export default {
         'n/no-sync': 'off',
 
         // No Node.js builtin modules
-        // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-nodejs-modules.md
-        'import/no-nodejs-modules': 'off',
+        // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-nodejs-modules.md
+        'import-x/no-nodejs-modules': 'off',
     },
 } satisfies Linter.Config;
