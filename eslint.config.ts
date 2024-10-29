@@ -4,22 +4,29 @@ import { core } from './src/index.ts';
 
 import type { Linter } from 'eslint';
 
+const files = [
+    'src/**/*.ts',
+    'build.config.js',
+    'eslint.config.ts',
+];
+
 export default [
     js.configs.recommended,
-    ...core,
+    ...core.map((config) => ({
+        ...config,
+        files,
+    })),
     {
+        files,
         rules: {
             '@typescript-eslint/naming-convention': 'off',
-        },
-    },
-    {
-        rules: {
             'import-x/no-unused-modules': [
                 'error',
                 {
                     ignoreExports: [
-                        'eslint.config.ts',
                         'src/index.ts',
+                        'build.config.js',
+                        'eslint.config.ts',
                     ],
                     missingExports: true,
                     unusedExports: true,
