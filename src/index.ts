@@ -1,8 +1,9 @@
+import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import importx from 'eslint-plugin-import-x';
 import nodePlugin from 'eslint-plugin-n';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import ts from 'typescript-eslint';
 
 import bestPractices from './airbnb/best-practices.ts';
 import errors from './airbnb/errors.ts';
@@ -23,12 +24,12 @@ type Parser = NonNullable<Config['languageOptions']>['parser'];
 const general = {
     name: '@rhyster/eslint-config/airbnb/general',
     plugins: {
-        '@typescript-eslint': tseslint.plugin as Plugin,
+        '@typescript-eslint': ts.plugin as Plugin,
         '@stylistic': stylistic as Plugin,
         'import-x': importx as unknown as Plugin,
     },
     languageOptions: {
-        parser: tseslint.parser as Parser,
+        parser: ts.parser as Parser,
         parserOptions: {
             projectService: true,
         },
@@ -73,11 +74,14 @@ const general = {
 } as const satisfies Config;
 
 export const core = [
+    js.configs.recommended,
     {
         name: '@rhyster/eslint-config/files-ts',
         files: ['**/*.ts'],
     },
     general,
+    ...ts.configs.strictTypeChecked as unknown as Linter.Config[],
+    ...ts.configs.stylisticTypeChecked as unknown as Linter.Config[],
     bestPractices,
     errors,
     style,
