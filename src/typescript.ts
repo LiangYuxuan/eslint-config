@@ -86,5 +86,8 @@ export default {
         'import-x/default': 'off',
         'import-x/no-named-as-default-member': 'off',
         'import-x/no-unresolved': 'off',
+
+        // https://typescript-eslint.io/rules/strict-boolean-expressions/
+        '@typescript-eslint/strict-boolean-expressions': 'error',
     },
 } satisfies Linter.Config;
