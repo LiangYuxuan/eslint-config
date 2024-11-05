@@ -307,7 +307,7 @@ export default {
 
         // require multiline ternary
         // https://eslint.style/rules/default/multiline-ternary
-        '@stylistic/multiline-ternary': ['error', 'never'],
+        '@stylistic/multiline-ternary': ['error', 'always-multiline'],
 
         // require a capital letter for constructors
         // https://eslint.org/docs/rules/new-cap
