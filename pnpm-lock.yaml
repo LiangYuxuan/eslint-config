@@ -12,8 +12,8 @@ importers:
         specifier: ^9.15.0
         version: 9.15.0
       '@stylistic/eslint-plugin':
-        specifier: ^2.10.1
-        version: 2.10.1(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)
+        specifier: ^2.11.0
+        version: 2.11.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)
       confusing-browser-globals:
         specifier: ^1.0.11
         version: 1.0.11
@@ -546,8 +546,8 @@ packages:
       rollup:
         optional: true
 
-  '@stylistic/eslint-plugin@2.10.1':
-    resolution: {integrity: sha512-U+4yzNXElTf9q0kEfnloI9XbOyD4cnEQCxjUI94q0+W++0GAEQvJ/slwEj9lwjDHfGADRSr+Tco/z0XJvmDfCQ==}
+  '@stylistic/eslint-plugin@2.11.0':
+    resolution: {integrity: sha512-PNRHbydNG5EH8NK4c+izdJlxajIR6GxcUhzsYNRsn6Myep4dsZt0qFCz3rCPnkvgO5FYibDcMqgNHUT+zvjYZw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -2076,9 +2076,9 @@ snapshots:
     optionalDependencies:
       rollup: 3.29.5
 
-  '@stylistic/eslint-plugin@2.10.1(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)':
+  '@stylistic/eslint-plugin@2.11.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.14.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)
+      '@typescript-eslint/utils': 8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.6.3)
       eslint: 9.15.0(jiti@2.4.0)
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
