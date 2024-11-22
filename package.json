@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -38,7 +38,7 @@
     "@types/confusing-browser-globals": "^1.0.3",
     "eslint": "^9.15.0",
     "jiti": "^2.4.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "unbuild": "^2.0.0"
   },
   "peerDependencies": {
