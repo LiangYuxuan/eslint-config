@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -54,5 +54,5 @@
     "globals": "^15.12.0",
     "typescript-eslint": "^8.16.0"
   },
-  "packageManager": "pnpm@9.14.2"
+  "packageManager": "pnpm@9.14.3"
 }
