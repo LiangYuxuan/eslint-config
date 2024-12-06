@@ -2,8 +2,10 @@ import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import importx from 'eslint-plugin-import-x';
 import nodePlugin from 'eslint-plugin-n';
+import vuePlugin from 'eslint-plugin-vue';
 import globals from 'globals';
 import ts from 'typescript-eslint';
+import vueParser from 'vue-eslint-parser';
 
 import bestPractices from './airbnb/best-practices.ts';
 import errors from './airbnb/errors.ts';
@@ -73,6 +75,56 @@ const general = {
     },
 } as const satisfies Config;
 
+const browserRules = {
+    name: '@rhyster/eslint-config/airbnb/browser',
+    languageOptions: {
+        globals: globals.browser,
+    },
+} as const satisfies Config;
+
+const generalVue = {
+    ...general,
+    name: '@rhyster/eslint-config/airbnb/general-vue',
+    plugins: {
+        ...general.plugins,
+        vue: vuePlugin as Plugin,
+    },
+    settings: {
+        ...general.settings,
+        'import-x/parsers': {
+            ...general.settings['import-x/parsers'],
+            'vue-eslint-parser': [
+                '.vue',
+            ],
+        },
+        'import-x/resolver': {
+            node: {
+                extensions: [
+                    ...general.settings['import-x/resolver'].node.extensions,
+                    '.vue',
+                ],
+            },
+        },
+        'import-x/extensions': [
+            ...general.settings['import-x/extensions'],
+            '.vue',
+        ],
+    },
+} as const satisfies Config;
+
+const setupVue: Config = {
+    name: '@rhyster/eslint-config/setup-vue',
+    files: ['**/*.vue'],
+    languageOptions: {
+        parser: vueParser,
+        parserOptions: {
+            projectService: true,
+            parser: ts.parser,
+            extraFileExtensions: ['.vue'],
+        },
+    },
+} as const satisfies Config;
+
 export const core = [
     js.configs.recommended,
     {
@@ -80,8 +132,8 @@ export const core = [
         files: ['**/*.ts'],
     },
     general,
-    ...ts.configs.strictTypeChecked as unknown as Linter.Config[],
-    ...ts.configs.stylisticTypeChecked as unknown as Linter.Config[],
+    ...ts.configs.strictTypeChecked as unknown as Config[],
+    ...ts.configs.stylisticTypeChecked as unknown as Config[],
     bestPractices,
     errors,
     style,
@@ -107,9 +159,49 @@ export const node = [
 
 export const browser = [
     ...core,
+    browserRules,
+] as const satisfies Config[];
+
+export const vue = [
+    js.configs.recommended,
     {
-        languageOptions: {
-            globals: globals.browser,
-        },
+        name: '@rhyster/eslint-config/files-ts',
+        files: ['**/*.ts'],
     },
+    {
+        name: '@rhyster/eslint-config/files-vue',
+        files: ['**/*.vue'],
+    },
+    generalVue,
+    ...ts.configs.strictTypeChecked.map((config) => {
+        if (config.files?.includes('**/*.ts') === true) {
+            return {
+                ...config,
+                files: [...config.files, '**/*.vue'],
+            };
+        }
+
+        return config;
+    }) as unknown as Config[],
+    ...ts.configs.stylisticTypeChecked.map((config) => {
+        if (config.files?.includes('**/*.ts') === true) {
+            return {
+                ...config,
+                files: [...config.files, '**/*.vue'],
+            };
+        }
+
+        return config;
+    }) as unknown as Config[],
+    bestPractices,
+    errors,
+    style,
+    variables,
+    es6,
+    imports,
+    strict,
+    typescript,
+    browserRules,
+    ...vuePlugin.configs['flat/recommended'] as unknown as Config[],
+    setupVue,
 ] as const satisfies Config[];
