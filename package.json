@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "unbuild && tsc --project .",
-    "lint": "eslint . --flag unstable_ts_config"
+    "lint": "eslint ."
   },
   "homepage": "https://github.com/LiangYuxuan/eslint-config#readme",
   "repository": {
