@@ -55,6 +55,7 @@ const setupVue: Config = {
 const vueConfigs: Config = {
     name: '@rhyster/eslint-config/vue-configs',
     rules: {
+        'vue/html-indent': ['error', 4],
         'import-x/no-unused-modules': 'off',
     },
 } as const satisfies Config;
