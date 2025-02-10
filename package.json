@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.6.25",
+  "version": "1.7.0",
   "description": "ESLint config",
   "type": "module",
   "exports": {
