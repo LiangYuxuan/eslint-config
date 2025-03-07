@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.7.8",
+  "version": "1.7.9",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -51,7 +51,7 @@
     "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-plugin-import-x": "^4.6.1",
     "eslint-plugin-n": "^17.15.1",
-    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue": "^10.0.0",
     "globals": "^16.0.0",
     "typescript-eslint": "^8.25.0",
     "vue-eslint-parser": "^9.4.3"
