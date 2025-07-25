@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.7.33",
+  "version": "1.7.34",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@eslint/js": "^9.32.0",
-    "@stylistic/eslint-plugin": "^4.4.1",
+    "@stylistic/eslint-plugin": "^5.2.2",
     "confusing-browser-globals": "^1.0.11",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.1",
