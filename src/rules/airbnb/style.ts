@@ -130,8 +130,8 @@ export default {
         '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
         // enforce spacing between functions and their invocations
-        // https://eslint.style/rules/default/func-call-spacing
-        '@stylistic/func-call-spacing': ['error', 'never'],
+        // https://eslint.style/rules/default/function-call-spacing
+        '@stylistic/function-call-spacing': ['error', 'never'],
 
         // requires function names to match the name of the variable or property to which they are
         // assigned
