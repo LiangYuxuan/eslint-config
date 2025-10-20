@@ -1,12 +1,14 @@
 import { core } from './src/index.ts';
 
+import type { Linter } from 'eslint';
+
 const files = [
     'src/**/*.ts',
     'build.config.js',
     'eslint.config.ts',
 ];
 
-export default [
+const rules: Linter.Config[] = [
     ...core.map((config) => ({
         ...config,
         files,
@@ -30,3 +32,5 @@ export default [
         },
     },
 ];
+
+export default rules;

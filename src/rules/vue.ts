@@ -60,9 +60,11 @@ const vueConfigs: Config = {
     },
 } as const satisfies Config;
 
-export default [
+const vueRules: Config[] = [
     generalVue,
     ...vuePlugin.configs['flat/recommended'] as unknown as Config[],
     setupVue,
     vueConfigs,
 ];
+
+export default vueRules;
