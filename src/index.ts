@@ -20,7 +20,7 @@ import type { Linter } from 'eslint';
 
 type Config = Linter.Config;
 
-const coreConfigs = [
+const coreConfigs: Config[] = [
     js.configs.recommended,
     general,
     ...ts.configs.strictTypeChecked as unknown as Config[],
@@ -33,14 +33,14 @@ const coreConfigs = [
     imports,
     strict,
     typescript,
-] as const satisfies Config[];
+];
 
-export const core = coreConfigs.map((config) => ({
+export const core: Config[] = coreConfigs.map((config) => ({
     ...config,
     files: ['src/**/*.ts'],
-})) satisfies Config[];
+}));
 
-export const node = [
+export const node: Config[] = [
     ...core,
     {
         name: '@rhyster/eslint-config/setup-node',
@@ -56,17 +56,17 @@ export const node = [
         ...nodeRules,
         files: ['src/**/*.ts'],
     },
-] as const satisfies Config[];
+];
 
-export const browser = [
+export const browser: Config[] = [
     ...core,
     {
         ...browserRules,
         files: ['src/**/*.ts'],
     },
-] as const satisfies Config[];
+];
 
-export const vue = [
+export const vue: Config[] = [
     ...browser.map((config) => ({
         ...config,
         files: ['src/**/*.ts', 'src/**/*.vue'],
@@ -75,4 +75,4 @@ export const vue = [
         ...config,
         files: ['src/**/*.vue'],
     })),
-] as const satisfies Config[];
+];
