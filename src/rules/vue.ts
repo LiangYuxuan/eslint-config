@@ -65,4 +65,4 @@ export default [
     ...vuePlugin.configs['flat/recommended'] as unknown as Config[],
     setupVue,
     vueConfigs,
-] satisfies Config[];
+];

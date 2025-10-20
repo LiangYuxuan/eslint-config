@@ -1,7 +1,5 @@
 import { core } from './src/index.ts';
 
-import type { Linter } from 'eslint';
-
 const files = [
     'src/**/*.ts',
     'build.config.js',
@@ -31,4 +29,4 @@ export default [
             ],
         },
     },
-] satisfies Linter.Config[];
+];
