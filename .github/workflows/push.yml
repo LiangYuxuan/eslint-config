@@ -28,9 +28,7 @@ jobs:
 
       - run: pnpm build
 
-      - uses: JS-DevTools/npm-publish@v4
-        with:
-          access: public
+      - run: pnpm publish -r
 
       - uses: butlerlogic/action-autotag@1.1.2
         env:
