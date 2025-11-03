@@ -21,7 +21,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 22.21.1
-          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm install -g npm@latest
 
       - run: pnpm install
 
@@ -29,7 +30,7 @@ jobs:
 
       - run: pnpm build
 
-      - run: npm publish --access public
+      - run: npm publish -r --access public
 
       - uses: butlerlogic/action-autotag@1.1.2
         env:
