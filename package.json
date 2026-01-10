@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "1.8.27",
+  "version": "1.8.28",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -56,5 +56,5 @@
     "typescript-eslint": "^8.52.0",
     "vue-eslint-parser": "^10.2.0"
   },
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@10.28.0"
 }
