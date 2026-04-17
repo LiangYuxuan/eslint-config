@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -36,9 +36,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/confusing-browser-globals": "^1.0.3",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "jiti": "^2.6.1",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "unbuild": "^3.6.1"
   },
   "peerDependencies": {
@@ -52,8 +52,8 @@
     "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-vue": "^10.8.0",
-    "globals": "^17.4.0",
-    "typescript-eslint": "^8.58.1",
+    "globals": "^17.5.0",
+    "typescript-eslint": "^8.58.2",
     "vue-eslint-parser": "^10.4.0"
   },
   "packageManager": "pnpm@10.33.0"
