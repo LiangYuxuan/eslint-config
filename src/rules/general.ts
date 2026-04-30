@@ -16,6 +16,7 @@ export default {
         'import-x': importx as unknown as Plugin,
     },
     languageOptions: {
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
         parser: ts.parser as Parser,
         parserOptions: {
             projectService: true,
