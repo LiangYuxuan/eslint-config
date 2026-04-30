@@ -15,7 +15,7 @@ const generalVue = {
     name: '@rhyster/eslint-config/airbnb/general-vue',
     plugins: {
         ...general.plugins,
-        vue: vuePlugin as Plugin,
+        vue: vuePlugin as unknown as Plugin,
     },
     settings: {
         ...general.settings,

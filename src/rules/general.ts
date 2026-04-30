@@ -11,8 +11,8 @@ type Parser = NonNullable<Config['languageOptions']>['parser'];
 export default {
     name: '@rhyster/eslint-config/general',
     plugins: {
-        '@typescript-eslint': ts.plugin as Plugin,
-        '@stylistic': stylistic as Plugin,
+        '@typescript-eslint': ts.plugin as unknown as Plugin,
+        '@stylistic': stylistic as unknown as Plugin,
         'import-x': importx as unknown as Plugin,
     },
     languageOptions: {
