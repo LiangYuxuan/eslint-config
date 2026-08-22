@@ -1,6 +1,6 @@
 {
   "name": "@rhyster/eslint-config",
-  "version": "2.0.27",
+  "version": "2.0.28",
   "description": "ESLint config",
   "type": "module",
   "exports": {
@@ -36,7 +36,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/confusing-browser-globals": "^1.0.3",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "jiti": "^2.7.0",
     "typescript": "^6.0.3",
     "unbuild": "^3.6.1"
